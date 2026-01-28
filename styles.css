@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+
+#grid {
+  display: grid;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+}
