@@ -1,10 +1,10 @@
 const { useState } = React;
 
 export function Board() {
-const [player, setPlayer] = useState("X");
-const [isGameOver, setIsGameOver] = useState(false);
-const [isDraw, setIsDraw] = useState(false);
-const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""]);
+  const [player, setPlayer] = useState("X");
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [isDraw, setIsDraw] = useState(false);
+  const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""]);
 
   function togglePlayer() {
     if (player === "X") {
@@ -36,7 +36,7 @@ const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""]);
 
   function checkRow(id) {
     const row = Math.floor(id / 3);
-    if (checkSquare(row + ((id + 1) % 3)) && checkSquare(row + ((id + 2)  % 3))) {
+    if (checkSquare(row * 3 + ((id + 1) % 3)) && checkSquare(row * 3 + ((id + 2)  % 3))) {
       return true;
     }
     return false;
